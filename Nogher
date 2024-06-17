@@ -8,7 +8,7 @@ local function onPlayerAdded(player)
     player.CharacterAdded:Connect(function(character)
         -- Wait for the Humanoid to be added
         local humanoid = character:WaitForChild("Humanoid")
-        humanoid.WalkSpeed = 32 -- Default is 16, so this doubles the speed
+        humanoid.WalkSpeed = 500 -- Default is 16, so this doubles the speed
     end)
 end
 
