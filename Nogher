@@ -1,8 +1,7 @@
--- Script to make the player move faster
 
 local Players = game:GetService("Players")
 
--- Function to increase player's walk speed
+
 local function onPlayerAdded(player)
     -- Wait for the character to be added
     player.CharacterAdded:Connect(function(character)
@@ -12,10 +11,8 @@ local function onPlayerAdded(player)
     end)
 end
 
--- Connect the function to the PlayerAdded event
 Players.PlayerAdded:Connect(onPlayerAdded)
 
--- Apply to players already in the game (useful for testing in Studio)
 for _, player in pairs(Players:GetPlayers()) do
     onPlayerAdded(player)
 end
