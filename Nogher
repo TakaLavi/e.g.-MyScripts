@@ -3,9 +3,7 @@ local Players = game:GetService("Players")
 
 
 local function onPlayerAdded(player)
-    -- Wait for the character to be added
     player.CharacterAdded:Connect(function(character)
-        -- Wait for the Humanoid to be added
         local humanoid = character:WaitForChild("Humanoid")
         humanoid.WalkSpeed = 500 -- Default is 16, so this doubles the speed
     end)
